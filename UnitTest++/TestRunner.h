@@ -47,6 +47,8 @@ public:
 	TestResults* GetTestResults();
 
 private:
+	TestRunner(TestRunner const&);
+	TestRunner& operator=(TestRunner const&);
 	TestReporter* m_reporter;
 	TestResults* m_result;
 	Timer* m_timer;
