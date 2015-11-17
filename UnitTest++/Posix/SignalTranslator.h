@@ -15,6 +15,8 @@ public:
     static sigjmp_buf* s_jumpTarget;
 
 private:
+	SignalTranslator(SignalTranslator const&);
+	SignalTranslator& operator=(SignalTranslator const&);
     sigjmp_buf m_currentJumpTarget;
     sigjmp_buf* m_oldJumpTarget;
 
